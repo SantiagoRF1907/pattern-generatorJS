@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patterns</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>Create fun patterns with different shapes and colors!</h1>
+    <div class="shapeContainer">
+      <div class="frame"></div>
+      <form id="shapeForm">
+        <!-- Color -->
+        <label for="color">Color</label>
+        <input type="text" id="color" name="color"/>
+        <!-- Amount of shapes -->
+        <label for="shapesAmount">Amount of shapes</label>
+        <input
+          type="text"
+          id="shapesAmount"
+          name="shapesAmount"
+          min="1"
+          max="50"
+        />
+        <!-- Angle direction -->
+         <label for="direction">Select pattern direction</label>
+         <select id="direction" name="direction">
+         <option value="">Select pattern direction</option>
+         <option value="left">Left</option>
+         <option value="right">Right</option>
+         </select>
+         <!-- Angle increment -->
+          <label for="angleIncrement">Angle increment</label>
+          <input type="text" id="angleIncrement" name="angleIncrement">
+        <p>Click the button to generate your pattern.</p>
+      <button type="button" onclick="generatePattern()">
+      </form>
+      
+        Generate Pattern
+      </button>
+    </div>
+  </body>
+</html>
