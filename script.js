@@ -9,8 +9,9 @@ function generatePattern() {
   const direction = form.elements["direction"].value;
   const angleIncrement = form.elements["angleIncrement"].value;
 
-  console.log(color);
-  console.log(shapesAmount);
+  console.log(`Shape color: ${color}`);
+  console.log(`Amount of shapes: ${shapesAmount}`);
+
   // Clear frame before generating new pattern
   frame.innerHTML = "";
 
@@ -41,5 +42,10 @@ function generatePattern() {
     shape.style.transform = `rotate(${angle}deg)`;
     shape.style.backgroundColor = color;
     frame.appendChild(shape);
+
+    // Change shape border color in case background color is black
+    if (color == "black") {
+      shape.style.border = "solid white 1px";
+    }
   }
 }
